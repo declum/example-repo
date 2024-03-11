@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
         $user = User::firstOrCreate(
             ['email' =>  'admin@admin.dev'],
-            ['name' => request('name'), 'password' => Hash::make('password'), 'email_verified_at' => now()]
+            ['name' => 'Administrator', 'password' => Hash::make('password'), 'email_verified_at' => now()]
         );
 
         $teams = [];
