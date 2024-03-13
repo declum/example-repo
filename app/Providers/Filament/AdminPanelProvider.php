@@ -55,6 +55,10 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->tenant(Team::class);;
+            ->tenant(Team::class)
+            ->domains([
+                "site-1.127-0-0-1.sslip.io",
+                "site-1.127-0-0-1.nip.io",
+            ]);
     }
 }
